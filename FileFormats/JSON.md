@@ -1,6 +1,16 @@
 JSON (JavaScript Object Notation)
 =================================
 
+- [JSON (JavaScript Object Notation)](#json-javascript-object-notation)
+  - [Tipos de Datos](#tipos-de-datos)
+    - [Número](#n%c3%bamero)
+    - [Cadena](#cadena)
+    - [Booleano](#booleano)
+    - [Objetos](#objetos)
+    - [Arreglo](#arreglo)
+  - [Referencias](#referencias)
+  - [Vease también](#vease-tambi%c3%a9n)
+
 JSON es una sintaxis para serializar estructuras de datos, como son: objetos,
 arreglos, números, cadenas, booleanos y `null`. Está basado en la sintaxis de
 JavaScript, pero es distinto.
@@ -25,14 +35,14 @@ programación las soportan de una forma u otra.
 
 ## Tipos de Datos
 
-Tipo        | Descripción
-:-----------|:--
-**Número**  | Secuencia numérica de punto flotante con precisión doble.
-**Cadena**  | Secuencia de caracteres entre comillas, permite caracteres unicode con secuencia de escape.
-**Booleano**| Valores booleanos `true` o `false`.
-**Null**    | Representa la ausencia de un valor.
-**Objeto**  | Estructura que almacena conjuntos de pares nombre/valor, encapsulados entre `{ }`.
-**Arreglo** | Colección de valores separados por coma de cualquier tipo encapsulados entre `[ ]`.
+| Tipo         | Descripción                                                                                 |
+| :----------- | :------------------------------------------------------------------------------------------ |
+| **Número**   | Secuencia numérica de punto flotante con precisión doble.                                   |
+| **Cadena**   | Secuencia de caracteres entre comillas, permite caracteres unicode con secuencia de escape. |
+| **Booleano** | Valores booleanos `true` o `false`.                                                         |
+| **Null**     | Representa la ausencia de un valor.                                                         |
+| **Objeto**   | Estructura que almacena conjuntos de pares nombre/valor, encapsulados entre `{ }`.          |
+| **Arreglo**  | Colección de valores separados por coma de cualquier tipo encapsulados entre `[ ]`.         |
 
 ### Número
 
@@ -58,17 +68,17 @@ caracter definido, para representar caracteres especiales o ambiguos en el
 formato.
 
 
-Secuencia   | Descripción                                   | Unicode
-------------|-----------------------------------------------|--------
-"           | Representa el caracter comillas dobles.       | `\u0022`
-\\          | Representa el caracter diagonal invertida.    | `\u005C`
-/           | Representa el caracter diagonal.              | `\u002F`
-b           | Representa el caracter retroceso.             | `\u007F`     
-f           | Representa el caracter form feed.             | `\u000C`
-n           | Representa el caracter de nueva línea.        | `\u000A`
-r           | Representa el caracter retorno de carro.      | `\u000D`
-t           | Representa el cacacter tabulador              | `\u0009`
-uXXXX       | Representa el caracter según el código Unicode de 4 dígitos.
+| Secuencia | Descripción                                                  | Unicode  |
+| --------- | ------------------------------------------------------------ | -------- |
+| "         | Representa el caracter comillas dobles.                      | `\u0022` |
+| \\        | Representa el caracter diagonal invertida.                   | `\u005C` |
+| /         | Representa el caracter diagonal.                             | `\u002F` |
+| b         | Representa el caracter retroceso.                            | `\u007F` |
+| f         | Representa el caracter form feed.                            | `\u000C` |
+| n         | Representa el caracter de nueva línea.                       | `\u000A` |
+| r         | Representa el caracter retorno de carro.                     | `\u000D` |
+| t         | Representa el cacacter tabulador                             | `\u0009` |
+| uXXXX     | Representa el caracter según el código Unicode de 4 dígitos. |
 
 Ejemplos:
   * ```json
@@ -97,13 +107,13 @@ Ejemplos:
     ```
     Algunos caracteres comunes:
     
-    Letra `Código` | Letra `Código`  | Letra `Código` | Letra `Código`
-    ---|---|---|---
-    Á `\u00C1` | á `\u00E1` | Ñ `\u00D1` | ñ `\u00F1`
-    É `\u00C9` | é `\u00E9` | Ü `\u00DC` | ü `\u00FC`
-    Í `\u00CD` | í `\u00ED` | ¡ `\u00A1` | ¿ `\u00BF`
-    Ó `\u00D3` | ó `\u00F3` 
-    Ú `\u00DA` | ú `\u00FA`
+    | Letra `Código` | Letra `Código` | Letra `Código` | Letra `Código` |
+    | -------------- | -------------- | -------------- | -------------- |
+    | Á `\u00C1`     | á `\u00E1`     | Ñ `\u00D1`     | ñ `\u00F1`     |
+    | É `\u00C9`     | é `\u00E9`     | Ü `\u00DC`     | ü `\u00FC`     |
+    | Í `\u00CD`     | í `\u00ED`     | ¡ `\u00A1`     | ¿ `\u00BF`     |
+    | Ó `\u00D3`     | ó `\u00F3`     |
+    | Ú `\u00DA`     | ú `\u00FA`     |
     
     [Sitio para buscar más caracteres y claves Unicode](https://unicode-table.com/es/)
 
@@ -208,6 +218,7 @@ Ejemplos:
 - [2]: JSON - Data Types (https://www.tutorialspoint.com/json/json_data_types.htm)
 
 ## Vease también
+- [JavaScript](../Lenguajes/JS/index.md)
 - [YAML](yaml.md)
 - [XML](xml.md)
 
