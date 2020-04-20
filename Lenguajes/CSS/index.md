@@ -255,71 +255,75 @@ Referencia rápida de Selectores
 ---------------------------------------
 
 ### Selectores generales
-| *Selector*            | *Ejemplo*              | *Descripción de ejemplo*                                                                                 |  
-| --------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------- |  
-| `.clase`              | `.intro`               | Selecciona a todos los elementos con `class="intro"`                                                     |  
-| `.clase1.clase2`      | `.name1.name2`         | Selecciona todos los elementos con ambas clases `name1` y `name2` establecidos en su atributo `class`    |  
-| `.clase1 .clase2`     | `.name1 .name2`        | Selecciona todos los elementos con clase `name2` que sea descendiente de un elemento con clase `name1`   |  
-| `#id`                 | `#firstname`           | Selecciona el elemento con `id="firstname"`                                                              |  
-| `*`                   | `*`                    | Selecciona todos los elementos                                                                           |  
-| `elemento`            | `p`                    | Selecciona todos los elementos `<p>`                                                                     |  
-| `elemento.clase`      | `p.intro`              | Selecciona todos los elementos `<p class="intro">`                                                       |  
-| `elemento, elemento`  | `div, p`               | Selecciona todos los elementos `<div>` y `<p>`                                                           |  
-| `elemento elemento`   | `div p`                | Selecciona todos los elementos `<p>` dentro de elementos `<div>`                                         |  
-| `elemento > elemento` | `div > p`              | Selecciona todos los elementos `<p>` donde el padre es un elemento `<div>`                               |  
-| `elemento + elemento` | `div + p`              | Selecciona todos los elementos `<p>` son elementos colocados inmediatamente después de elementos `<div>` |  
-| `element1 ~ element2` | `p ~ ul`               | Selecciona cada elemento `<ul>` que sea precedido por un elemento `<p>`                                  |  
-| `[atributo]`          | `[target]`             | Selecciona todos los elementos con atributo `target`                                                     |  
-| `[atributo=valor]`    | `[target=_blank]`      | Selecciona todos los elementos con `target="blank"`                                                      |  
-| `[atributo~=valor]`   | `[title~=flor]`        | Selecciona todos los elementos con atributo título que contengan la palabra `"flor"`                     |  
-| `[atributo|=value]`   | `[lang|=en]`           | Selecciona todos los elementos con un atributo `lang` que inicien con `"en"`                             |  
-| `[atributo^=valor]`   | `a[href^="https"]`     | Selecciona cada elemento `<a>` donde el atributo `href` comience con `"https"`                           |  
-| `[atributo$=valor]`   | `a[href$=".pdf"]`      | Selecciona cada elemento `<a>` donde su atributo `href` termine con `".pdf"`                             |  
-| `[atributo*=valor]`   | `a[href*="w3schools"]` | Selecciona cada elemento `<a>` donde su atributo `href` contenga la subcadena `"w3schools"`              |  
+
+| *Selector*            | *Ejemplo*              | *Descripción de ejemplo*                                                                                 |
+| --------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------- |
+| `.clase`              | `.intro`               | Selecciona a todos los elementos con `class="intro"`                                                     |
+| `.clase1.clase2`      | `.name1.name2`         | Selecciona todos los elementos con ambas clases `name1` y `name2` establecidos en su atributo `class`    |
+| `.clase1 .clase2`     | `.name1 .name2`        | Selecciona todos los elementos con clase `name2` que sea descendiente de un elemento con clase `name1`   |
+| `#id`                 | `#firstname`           | Selecciona el elemento con `id="firstname"`                                                              |
+| `*`                   | `*`                    | Selecciona todos los elementos                                                                           |
+| `elemento`            | `p`                    | Selecciona todos los elementos `<p>`                                                                     |
+| `elemento.clase`      | `p.intro`              | Selecciona todos los elementos `<p class="intro">`                                                       |
+| `elemento, elemento`  | `div, p`               | Selecciona todos los elementos `<div>` y `<p>`                                                           |
+| `elemento elemento`   | `div p`                | Selecciona todos los elementos `<p>` dentro de elementos `<div>`                                         |
+| `elemento > elemento` | `div > p`              | Selecciona todos los elementos `<p>` donde el padre es un elemento `<div>`                               |
+| `elemento + elemento` | `div + p`              | Selecciona todos los elementos `<p>` son elementos colocados inmediatamente después de elementos `<div>` |
+| `element1 ~ element2` | `p ~ ul`               | Selecciona cada elemento `<ul>` que sea precedido por un elemento `<p>`                                  |
+| `[atributo]`          | `[target]`             | Selecciona todos los elementos con atributo `target`                                                     |
+| `[atributo=valor]`    | `[target=_blank]`      | Selecciona todos los elementos con `target="blank"`                                                      |
+| `[atributo~=valor]`   | `[title~=flor]`        | Selecciona todos los elementos con atributo título que contengan la palabra `"flor"`                     |
+| `[atributo|=value]`   | `[lang|=en]`           | Selecciona todos los elementos con un atributo `lang` que inicien con `"en"`                             |
+| `[atributo^=valor]`   | `a[href^="https"]`     | Selecciona cada elemento `<a>` donde el atributo `href` comience con `"https"`                           |
+| `[atributo$=valor]`   | `a[href$=".pdf"]`      | Selecciona cada elemento `<a>` donde su atributo `href` termine con `".pdf"`                             |
+| `[atributo*=valor]`   | `a[href*="w3schools"]` | Selecciona cada elemento `<a>` donde su atributo `href` contenga la subcadena `"w3schools"`              |
 
 ### Selectores por estado de los elementos
-| *Selector*       | *Ejemplo*     | *Descripción de ejemplo*                                                  |  
-| ---------------- | ------------- | ------------------------------------------------------------------------- |  
-| `:target`        | `:target`     | Selecciona el elemento activo en el *#fragment" de la URL                 |  
-| `:hover`         | `a:hover`     | Selecciona los enlaces cuando el puntero esté sobre el elemento           |  
-| `:link`          | `a:link`      | Selecciona todos los enlaces que no han sido visitados                    |  
-| `:active`        | `a:active`    | Selecciona el hiperenlace cuando está presionado                          |  
-| `:visited`       | `a:visited`   | Selecciona todos los hiperenlaces visitados                               |  
-| `:focus`         | `input:focus` | Selecciona el elemento input que tiene el foco                            |  
-| `:empty`         | `p:empty`     | Selecciona todos los elementos `<p>` que estén vacíos (incluso sin texto) |  
+
+| *Selector*       | *Ejemplo*     | *Descripción de ejemplo*                                                  |
+| ---------------- | ------------- | ------------------------------------------------------------------------- |
+| `:target`        | `:target`     | Selecciona el elemento activo en el *#fragment" de la URL                 |
+| `:hover`         | `a:hover`     | Selecciona los enlaces cuando el puntero esté sobre el elemento           |
+| `:link`          | `a:link`      | Selecciona todos los enlaces que no han sido visitados                    |
+| `:active`        | `a:active`    | Selecciona el hiperenlace cuando está presionado                          |
+| `:visited`       | `a:visited`   | Selecciona todos los hiperenlaces visitados                               |
+| `:focus`         | `input:focus` | Selecciona el elemento input que tiene el foco                            |
+| `:empty`         | `p:empty`     | Selecciona todos los elementos `<p>` que estén vacíos (incluso sin texto) |
 | `:not(selector)` | `:not(p)`     | Selecciona todos los elementos que no sean `<p>`                          |
 
 ### Selectores por ubicación en el DOM
-| *Selector*             | *Ejemplo*             | *Descripción de ejemplo*                                                                                        |  
-| ---------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------- |  
-| `:root`                | `:root`               | Selecciona el elemento raiz del documento                                                                       |  
-| `:lang(idioma)`        | `p:lang(es)`          | Selecciona todos los elementos `<p>` con un atributo de idioma `lang` igual a "es" (español)                    |  
-| `:first-child`         | `p:first-child`       | Selecciona cada elemento `<p>` que sea el primer hijo de su padre                                               |  
-| `:first-of-type`       | `p:first-of-type`     | Selecciona todos los elementos `<p>` que sean el primer elemento `<p>` de su padre                              |  
-| `:nth-child(n)`        | `p:nth-child(2)`      | Selecciona cada elemento `<p>` que sea el segundo elemento hijo de su padre                                     |  
-| `:nth-of-type(n)`      | `p:nth-of-type(2)`    | Selecciona cada elemento `<p>` que sea segundo elemento `<p>` de su padre                                       |  
-| `:nth-last-of-type(n)` | `p:last-of-type(2)`   | Selecciona cada elemento `<p>` que sea penúltimo elemento `<p>` de su padre (segundo en reversa desde el final) |  
-| `:nth-last-child(n)`   | `p:nth-last-child(2)` | Selecciona cada elemento `<p>` que sea penúltimo elemento de su padre (segundo en reversa desde el final)       |  
-| `:last-of-type`        | `p:last-of-type`      | Selecciona cada elemento `<p>` que sea el último elemento `<p>` de su padre                                     |  
-| `:last-child`          | `p:last-child`        | Selecciona cada elemento `<p>` que sea el último hijo de su padre                                               |  
-| `:only-of-type`        | `p:only-of-type`      | Selecciona cada elemento `<p>` que sea el único elemento `<p>` de su padre                                      |  
+
+| *Selector*             | *Ejemplo*             | *Descripción de ejemplo*                                                                                        |
+| ---------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `:root`                | `:root`               | Selecciona el elemento raiz del documento                                                                       |
+| `:lang(idioma)`        | `p:lang(es)`          | Selecciona todos los elementos `<p>` con un atributo de idioma `lang` igual a "es" (español)                    |
+| `:first-child`         | `p:first-child`       | Selecciona cada elemento `<p>` que sea el primer hijo de su padre                                               |
+| `:first-of-type`       | `p:first-of-type`     | Selecciona todos los elementos `<p>` que sean el primer elemento `<p>` de su padre                              |
+| `:nth-child(n)`        | `p:nth-child(2)`      | Selecciona cada elemento `<p>` que sea el segundo elemento hijo de su padre                                     |
+| `:nth-of-type(n)`      | `p:nth-of-type(2)`    | Selecciona cada elemento `<p>` que sea segundo elemento `<p>` de su padre                                       |
+| `:nth-last-of-type(n)` | `p:last-of-type(2)`   | Selecciona cada elemento `<p>` que sea penúltimo elemento `<p>` de su padre (segundo en reversa desde el final) |
+| `:nth-last-child(n)`   | `p:nth-last-child(2)` | Selecciona cada elemento `<p>` que sea penúltimo elemento de su padre (segundo en reversa desde el final)       |
+| `:last-of-type`        | `p:last-of-type`      | Selecciona cada elemento `<p>` que sea el último elemento `<p>` de su padre                                     |
+| `:last-child`          | `p:last-child`        | Selecciona cada elemento `<p>` que sea el último hijo de su padre                                               |
+| `:only-of-type`        | `p:only-of-type`      | Selecciona cada elemento `<p>` que sea el único elemento `<p>` de su padre                                      |
 | `:only-child`          | `p:only-child`        | Selecciona cada elemento `<p>` que sea el único hijo de su padre                                                |
 
 ### Selectores para formularios
-| *Selector*       | *Ejemplo*             | *Descripción de ejemplo*                                                                                                       |  
-| ---------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |  
-| `:enabled`       | `input:enabled`       | Selecciona todos los elementos `<input>` que estén habilitados.                                                                |  
-| `:disabled`      | `input:disabled`      | Selecciona todos los `<input>` que estén deshabilitados                                                                        |  
-| `:required`      | `input:required`      | Selecciona elementos `<input>` con el atributo `required`                                                                      |  
-| `:optional`      | `input:optional`      | Selecciona elementos `<input>` sin el atributo `required`                                                                      |  
-| `:checked`       | `input:checked`       | Selecciona un input cuando esté marcado (aplica para `type=radio` y `type=checkbox`)                                           |  
-| `:indeterminate` | `input:indeterminate` | Selecciona los elementos input que estén en estado indeterminado (checkbox intermedia <input type="checkbox" indeterminate />) |  
-| `:in-range`      | `input:in-range`      | Selecciona los elementos `<input>` cuando su valor esté en el rango de `min` y `max`                                           |  
-| `:out-of-range`  | `input:out-of-range`  | Selecciona elementos `<input>` con un valor fuera del rango de `min` y `max`                                                   |  
-| `:valid`         | `input:valid`         | Selecciona todos los elementos `<input>` con un valor válido                                                                   |  
-| `:invalid`       | `input:invalid`       | Selecciona todos los elementos `<input>` con un valor invalido                                                                 |  
-| `:read-only`     | `input:read-only`     | Selecciona elementos `<input>` que NO tengan el atributo `readonly` especificado                                               |  
-| `:read-write`    | `input:read-write`    | Selecciona elementos `<input>` que tengan el atributo `readonly` especificado                                                  |  
+
+| *Selector*       | *Ejemplo*             | *Descripción de ejemplo*                                                                                                       |
+| ---------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `:enabled`       | `input:enabled`       | Selecciona todos los elementos `<input>` que estén habilitados.                                                                |
+| `:disabled`      | `input:disabled`      | Selecciona todos los `<input>` que estén deshabilitados                                                                        |
+| `:required`      | `input:required`      | Selecciona elementos `<input>` con el atributo `required`                                                                      |
+| `:optional`      | `input:optional`      | Selecciona elementos `<input>` sin el atributo `required`                                                                      |
+| `:checked`       | `input:checked`       | Selecciona un input cuando esté marcado (aplica para `type=radio` y `type=checkbox`)                                           |
+| `:indeterminate` | `input:indeterminate` | Selecciona los elementos input que estén en estado indeterminado (checkbox intermedia <input type="checkbox" indeterminate />) |
+| `:in-range`      | `input:in-range`      | Selecciona los elementos `<input>` cuando su valor esté en el rango de `min` y `max`                                           |
+| `:out-of-range`  | `input:out-of-range`  | Selecciona elementos `<input>` con un valor fuera del rango de `min` y `max`                                                   |
+| `:valid`         | `input:valid`         | Selecciona todos los elementos `<input>` con un valor válido                                                                   |
+| `:invalid`       | `input:invalid`       | Selecciona todos los elementos `<input>` con un valor invalido                                                                 |
+| `:read-only`     | `input:read-only`     | Selecciona elementos `<input>` que NO tengan el atributo `readonly` especificado                                               |
+| `:read-write`    | `input:read-write`    | Selecciona elementos `<input>` que tengan el atributo `readonly` especificado                                                  |
 | `:default`       | `input:default`       | Selecciona el `<input>` predeterminado (aplica a `button`, `input[type=checkbox]`, `input[type=radio]` y `option`)             |
 
 Referencia rápida de selectores CSS [W3Schools](https://www.w3schools.com/cssref/css_selectors.asp)
