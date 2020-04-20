@@ -240,6 +240,7 @@ Resultado:
 Referencia rápida de Selectores
 ---------------------------------------
 
+### Selectores generales
 | *Selector* | *Ejemplo* | *Descripción de ejemplo* |
 | --- | --- | --- |
 | `.clase`               | `.intro`               | Selecciona a todos los elementos con `class="intro"`                                                                           |
@@ -261,7 +262,10 @@ Referencia rápida de Selectores
 | `[atributo^=valor]`    | `a[href^="https"]`     | Selecciona cada elemento `<a>` donde el atributo `href` comience con `"https"`                                                 |
 | `[atributo$=valor]`    | `a[href$=".pdf"]`      | Selecciona cada elemento `<a>` donde su atributo `href` termine con `".pdf"`                                                   |
 | `[atributo*=valor]`    | `a[href*="w3schools"]` | Selecciona cada elemento `<a>` donde su atributo `href` contenga la subcadena `"w3schools"`                                    |
-| *Por estado*           |                        |                                                                                                                                |
+
+### Selectores por estado de los elementos
+| *Selector* | *Ejemplo* | *Descripción de ejemplo* |
+| --- | --- | --- |
 | `:target`              | `:target`              | Selecciona el elemento activo en el *#fragment" de la URL                                                                      |
 | `:hover`               | `a:hover`              | Selecciona los enlaces cuando el puntero esté sobre el elemento                                                                |
 | `:link`                | `a:link`               | Selecciona todos los enlaces que no han sido visitados                                                                         |
@@ -270,7 +274,10 @@ Referencia rápida de Selectores
 | `:focus`               | `input:focus`          | Selecciona el elemento input que tiene el foco                                                                                 |
 | `:empty`               | `p:empty`              | Selecciona todos los elementos `<p>` que estén vacíos (incluso sin texto)                                                      |
 | `:not(selector)`       | `:not(p)`              | Selecciona todos los elementos que no sean `<p>`                                                                               |
-| *Por ubicación*        |                        |                                                                                                                                |
+
+### Selectores por ubicación en el DOM
+| *Selector* | *Ejemplo* | *Descripción de ejemplo* |
+| --- | --- | --- |
 | `:root`                | `:root`                | Selecciona el elemento raiz del documento                                                                                      |
 | `:lang(idioma)`        | `p:lang(es)`           | Selecciona todos los elementos `<p>` con un atributo de idioma `lang` igual a "es" (español)                                   |
 | `:first-child`         | `p:first-child`        | Selecciona cada elemento `<p>` que sea el primer hijo de su padre                                                              |
@@ -283,7 +290,10 @@ Referencia rápida de Selectores
 | `:last-child`          | `p:last-child`         | Selecciona cada elemento `<p>` que sea el último hijo de su padre                                                              |
 | `:only-of-type`        | `p:only-of-type`       | Selecciona cada elemento `<p>` que sea el único elemento `<p>` de su padre                                                     |
 | `:only-child`          | `p:only-child`         | Selecciona cada elemento `<p>` que sea el único hijo de su padre                                                               |
-| *Para formularios*     |                        |                                                                                                                                |
+
+### Selectores para formularios
+| *Selector* | *Ejemplo* | *Descripción de ejemplo* |
+| --- | --- | --- |
 | `:enabled`             | `input:enabled`        | Selecciona todos los elementos `<input>` que estén habilitados.                                                                |
 | `:disabled`            | `input:disabled`       | Selecciona todos los `<input>` que estén deshabilitados                                                                        |
 | `:required`            | `input:required`       | Selecciona elementos `<input>` con el atributo `required`                                                                      |
