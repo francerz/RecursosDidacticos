@@ -240,8 +240,8 @@ Resultado:
 Referencia rápida de Selectores
 ---------------------------------------
 
-| *Selector*             | *Ejemplo*              | *Descripción de ejemplo*                                                                                                       |
-| ---------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| *Selector* | *Ejemplo* | *Descripción de ejemplo* |
+| --- | --- | --- |
 | `.clase`               | `.intro`               | Selecciona a todos los elementos con `class="intro"`                                                                           |
 | `.clase1.clase2`       | `.name1.name2`         | Selecciona todos los elementos con ambas clases `name1` y `name2` establecidos en su atributo `class`                          |
 | `.clase1 .clase2`      | `.name1 .name2`        | Selecciona todos los elementos con clase `name2` que sea descendiente de un elemento con clase `name1`                         |
@@ -297,4 +297,5 @@ Referencia rápida de Selectores
 | `:read-only`           | `input:read-only`      | Selecciona elementos `<input>` que NO tengan el atributo `readonly` especificado                                               |
 | `:read-write`          | `input:read-write`     | Selecciona elementos `<input>` que tengan el atributo `readonly` especificado                                                  |
 | `:default`             | `input:default`        | Selecciona el `<input>` predeterminado (aplica a `button`, `input[type=checkbox]`, `input[type=radio]` y `option`)             |
+
 Referencia rápida de selectores CSS [W3Schools](https://www.w3schools.com/cssref/css_selectors.asp)
