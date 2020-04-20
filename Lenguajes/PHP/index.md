@@ -196,6 +196,7 @@ print_r($b);    // Resultado: 21
 
 Asignación por referencia:
 ```php
+<?php
 $a = 20;
 $b = &$a;       // <-- Nótese el & antes de la variable $a
 
