@@ -557,6 +557,101 @@ array(1) {
 
 #### Objetos
 
+Aunque la naturaleza de PHP permite hacerlo funcionar utilizando únicamente
+variables o funciones, como un lenguaje estructurado, se ha introducido también
+características de programación orientada a objetos. Esto significa que toman
+valor los conceptos de clase, herencia, métodos, encapsulamiento, polimorfismo,
+etc.
+
+```php
+<?php
+class Alumno
+{
+    $numControl;
+    $nombre;
+
+    function hacerTarea()
+    {
+        return "tarea completada";
+    }
+}
+
+$alumno = new Alumno();
+$alumno->numControl = "18460323";
+$alumno->nombre = "Salvador";
+$alumno->hacerTarea();
+```
+
+```php
+<?php
+class Persona
+{
+    // Las variables `static` son comunes en todos los objetos de la misma
+    // clase, por lo que si cambia en una objeto, en el resto también.
+    private static $count = 0;
+
+    // Se definen dos propiedades privadas, lo que signifca que sólo pueden
+    // ser accedidas desde la misma clase.
+    private $id;
+    private $curp;
+
+    // En cambio, las propiedades públicas se pueden acceder desde cualquier
+    // parte del código.
+    public $nombre;
+
+    // Los atributos se pueden inicialzar utilizando la función `__construct`.
+    // Al princpio del nombre tiene doble guión bajo.
+    public function __construct()
+    {
+        // La palabra $this hace referencia a la instancia del objeto
+        // Para referenciar variables estáticas se usa `static::$variable`
+        $this->id = ++static::$count;
+    }
+
+    // Se puede utilizar el método mágico `__get` para capturar las referencias
+    // de lectura de atributos que no existan o sean inaccesibles, como los
+    // privados.
+    public function __get($nombrePropiedad)
+    {
+        if (property_exists($this, $nombrePropiedad)) {
+            return $this->{$nombrePropiedad};
+        }
+    }
+
+    // Se puede asignar el valor de variables utlizando métodos, y en estos
+    // métodos se permite agregar validación del valor
+    public function setCurp($curp)
+    {
+        if (strlen($curp) < 18) {
+            throw new Exception("Longitud incorrecta de la CURP");
+        }
+        $this->curp = $curp;
+    }
+}
+
+// Se crea la instancia de la clase (hacer un objeto)
+$persona = new Persona();
+
+// Se asigna valor de atributo público
+$persona->nombre = "Francisco Cervantes";
+
+// FALLA: El atributo `curp` es privado
+$persona->curp = "CEZF911109HCMRMR08";
+
+// FALLA: Lanza Excepción por no cumplir con la longitud requerida
+$persona->setCurp("CEZF911109");
+
+// Funciona y se asigna valor al atributo `curp`
+$persona->setCurp("CEZF911109HCMRMR08");
+
+// Se obtiene el valor del atributo público
+echo "Nombre: $persona->nombre".PHP_EOL; // Salida: Nombre: Francisco Cervantes
+
+// Se obtiene el valor de atributos privados por medio de método `__get`
+echo "ID: $persona->id" . PHP_EOL .     // Salida: ID: 1
+     "CURP: $persona->curp";            // Salida: CURP: CEZF911109HCMRMR09
+
+```
 
 #### Recursos
 
