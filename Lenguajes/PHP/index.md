@@ -17,7 +17,7 @@ Lenguaje PHP
         - [Comillas dobles](#comillas-dobles)
           - [Conversión de variables en cadenas](#conversi%c3%b3n-de-variables-en-cadenas)
       - [Arreglos](#arreglos)
-      - [Iterables](#iterables)
+        - [Claves](#claves)
       - [Objetos](#objetos)
       - [Recursos](#recursos)
       - [NULL](#null)
@@ -447,11 +447,113 @@ echo "Este es el valor de la variable llamada por el valor de retorno de \$obj->
 echo "ESte es el valor de retorno de getName(): {getName()}";
 ```
 
+* **Variedad de funciones de cadena**  
+  <https://www.php.net/manual/es/ref.strings.php>
+
 #### Arreglos
 
+Los arreglos en PHP son un mapa, que asocia valores con claves, de manera ordenada. Dada su naturaleza se puede utilizar como una amplia variedad de
+estructuras de coleccción de datos, equivaliendo a: arreglo, lista (vector),
+tabla hash, diccionario, colección, pila, cola, etc. Y dado que un arreglo
+puede contener otros arreglos, también es posible formar árboles o arreglos
+multidimensionales.
 
-#### Iterables
+Un arreglo puede ser creado utilizando la función constructora del lenguaje
+`array()`. En la cual hay un conjunto de pares *clave*/*valor* separados por
+coma.
 
+```
+array(
+    clave  => valor,
+    clave2 => valor2,
+    clave3 => valor3,
+    ...
+)
+```
+
+Ejemplo de arreglo simple:
+```php
+<?php
+$numeros = array(1, 2, 3, 4, 5);
+
+$cadenas = array("Alfa", "Bravo", "Charlie", "Delta");
+```
+
+Los arreglos en PHP son heterogéneos, lo que significa que el mismo arreglo
+puede contener elementos de diferentes tipos de datos, aunque estos no tengan
+relación directa.
+
+```php
+<?php
+$mixto = array(
+    1,                  // entero
+    2,                  // entero
+    "tres",             // cadena
+    4.0,                // flotabte
+    "5",                // cadena numérica
+    new stdClass(),     // objeto
+    true,               // booleano
+    8,                  // entero
+    array(9, 9.5, 9.9), // arreglo
+    10                  // entero
+);
+```
+
+##### Claves
+
+Las claves en los arreglos son los valores con los que se pueden indizar los
+elementos de un arreglo, estos pueden ser enteros o cadenas.
+
+```php
+<?php
+$arreglo = array(   // <-- El arreglo contiene únicamente claves numéricas.
+    0   => 'Cero',
+    1   => 'Uno',
+    2   => 'Dos',
+    3   => 'Tres'
+);
+
+$diccionario = array(
+    '09290324'  => 'Osiel',
+    '09290325'  => 'Elva',
+    '09290326'  => 'Nancy',
+    '09290327'  => 'Martha',
+    '09290328'  => 'Francisco',
+    '09290329'  => 'Oscar'
+);
+```
+
+En caso de que se quieran registrar otros tipos de datos, ocurren
+las siguientes conversiones:
+* **Cadenas:** Que tengan enteros decimales, a menos de que el número sea
+  precedido por un signo de +, se convertirá en un tipo de entero. Es decir,
+  que `"8"` se almacenará como `8` (entero positivo ocho).
+* **Flotantes:** Los flotantes tambien se convierten en enteros, lo que significa
+  que su parte fraccional será truncada. Ejemplo `8.7` se convertirá en `8`.
+* **Booleanos:** Serán convertidos a enteros. `true` será `1`, y `false` será `0`
+* **Null:** Se convertirán a cadenas vacías.
+* **Arreglos y objetos:** no se permiten como claves y se arrojará una advertencia.
+
+```php
+<?php
+$arreglo = array(
+    1    => "a",
+    "1"  => "b",
+    1.5  => "c",
+    true => "d",
+);
+var_dump($arreglo);
+```
+
+```
+array(1) {
+    [1] =>
+    string(1) "d"
+}
+```
+
+* **Variedad de funciones de arreglos**  
+  <https://www.php.net/manual/es/ref.array.php>
 
 #### Objetos
 
