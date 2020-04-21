@@ -658,12 +658,85 @@ echo "ID: $persona->id" . PHP_EOL .     // Salida: ID: 1
 
 #### Recursos
 
+Un recurso es un tipo especial de variable que retiene la referencia a un
+recurso externo.
+
+Los recursos son creados por funciones especiales y se refieren regularmente a
+archivos abiertos, conexiones de base de datos, conexiones a servidores remotos,
+etc.
 
 #### NULL
 
+Es un tipo especial de variable sin valor. el valor `NULL` es el único posible
+valor del tipo null.
+
+Una variable se considera nula si:
+* Ha sido asignado con la constante `NULL`;
+* No se ha establecido en algún valor.
+* Se le aplicó la función `unset()`.
+
+```php
+<?php
+$variable = NULL;
+```
 
 #### Callbacks
 
+Los *Callbacks* o "Retro llamadas" son un tipo de dato en el que se utilizan
+funciones como argumentos y permite ejecutar código de manera asíncrona.
+
+La forma más común de utilizar los callbacks es utilizando funciones anónimas.
+
+```php
+<?php
+$numeros = array(1, 2, 3, 4, 5);
+
+// Declaración de una función estándar en PHP.
+function x2($n) {
+    return $n * 2;
+}
+
+echo x2(10); // Salida: 20
+
+print_r(array_map('x2', $numeros));
+```
+
+```
+Array
+(
+    [0] => 2,
+    [1] => 4,
+    [2] => 6,
+    [3] => 8,
+    [4] => 10
+)
+```
+
+Con el siguiente ejemplo se obtiene el mismo resultado que el código anterior.
+```php
+<?php
+$numeros = array(1, 2, 3, 4, 5);
+
+// Asignación de una función a una variable.
+$x2 = function($n) {
+    return $n * 2;
+}
+
+echo $x2(10); // Salida: 20
+
+print_r(array_map($x2, $numeros));
+```
+
+Incluso es posible omitir la declaración de la función y colocarla directamente
+como argumento de `array_map`.
+```php
+<?php
+$numeros = array(1, 2, 3, 4, 5);
+
+print_r(array_map(function($n) {
+    return $n * 2;
+}, $numeros));
+```
 
 
 [2]: https://www.php.net/manual/en/language.types.php
