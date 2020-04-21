@@ -8,6 +8,20 @@ Lenguaje PHP
     - [Etiquetas](#etiquetas)
     - [Variables](#variables)
       - [Asignación por referencia](#asignaci%c3%b3n-por-referencia)
+    - [Tipos de datos](#tipos-de-datos)
+      - [Booleanos](#booleanos)
+      - [Enteros](#enteros)
+      - [Números de punto flotante](#n%c3%bameros-de-punto-flotante)
+      - [Cadenas](#cadenas)
+        - [Comillas simples](#comillas-simples)
+        - [Comillas dobles](#comillas-dobles)
+          - [Conversión de variables en cadenas](#conversi%c3%b3n-de-variables-en-cadenas)
+      - [Arreglos](#arreglos)
+      - [Iterables](#iterables)
+      - [Objetos](#objetos)
+      - [Recursos](#recursos)
+      - [NULL](#null)
+      - [Callbacks](#callbacks)
 
 PHP (PHP: Hipertext Preprocesor) es un lenguaje de programación popular que se
 utiliza para *scripting* del lado del servidor y con propósito general,
@@ -205,3 +219,251 @@ $b++;
 print_r($a);    // Resultado: 21
 print_r($b);    // Resultado: 21
 ```
+
+### Tipos de datos
+[[2]]
+
+Aunque al momento de declarar una variable no se especifique el tipo de dato,
+estos continúan existiendo en el lenguaje. Los tipos más comunes de tipos de
+dato son:
+
+#### Booleanos
+Este es el tipo de dato más simple. Sólo tiene dos posibles valores: `true` y
+`false`.
+
+#### Enteros
+Un entero es un número sin valores decimales, que incluye positivos, negativos
+y cero. Se aceptan diferentes tipos de representaciones de los datos.
+```php
+<?php
+$a = 1234;    // número decimal
+$a = 0123;    // número en octal (equivale a 83 decimal)
+$a = 0x1A;    // número hexadecimal (equivalente a 26 decimal)
+$a = 0b11111111;  // número binario (equivalente a 255 decimal)
+```
+
+#### Números de punto flotante 
+Los números de punto flotante (tambien conocidos como "flotantes" o "reales")
+son aquellos que tienen punto decimal y se pueden expresar de la siguiente
+manera:
+```php
+<?php
+$a = 1.234;
+$b = 1.2e3; // equivale a 1200 (el punto se "recorre" 3 espacios a la derecha)
+$c = 7e-10; // equivale a 0.0000000007 (el punto se "recorre" 10 espacios a la izquierda).
+```
+
+#### Cadenas
+Una cadena es una serie de caracteres, donde un caracter es lo mismo que un
+byte. Esto significa que PHP sólo soporta conjuntos de 256 caracteres, y no
+ofrece soporte nativo a Unicode.
+
+Las cadenas pueden especificarse de cuatro maneras distintas *comillas simples*`,
+*comillas dobles*, *sintaxis heredoc* y *sintaxis heredoc* (En esta guía sólo se tratarán las dos primeras, que son las más comunes).
+
+##### Comillas simples
+
+La manera más simple de especificar una *string* es encerrando entre comillas
+simples `'`.
+
+Cuando una cadena utiliza comillas simples, puede incluirse el caracter dentro
+de la misma utilizando la secuencia de escape `\'`. Para incluir una diagnoal
+invertida se puede utilizar `\\` doble diagonal invertida. Todas las demás
+secuencias de escape no son compatibles con este tipo de cadena, por lo que
+utilizar secuencias `\r`, `\n` o `\t` no serán convertidas y se mostrarán tal
+cual en la cadena.
+
+> **Nota:** A diferencia de las sintaxis de comillas doble y heredoc, las
+> variables y secuencias de escape para caracteres especiales no serán expandidas
+> cuando se utilizen cadenas de una sola comilla.
+
+```php
+<?php
+echo 'esta es una cadena simple';
+
+echo 'También se pueden incluir saltos de línea
+en cadenas de esta manera y
+está bien hacerlo así';
+
+// Salida: Arnold una vez dijo: "I'll be back"
+echo 'Arnold una vez dijo: "I\'ll be back"';
+
+// Salida: ¿Desea borrar  C:\*.*?
+echo '¿Desea borrar C:\\*.*?';
+
+// Salida: Esto no se va a extender: \n una nueva línea
+echo 'Esto no se va a extender: \n una nueva línea';
+
+// Salida: Variables no se $expanden $tampoco
+echo 'Variables no se $expanden $tampoco';
+```
+
+##### Comillas dobles
+
+Si la cadena se encierra entre comillas dobles `"`, PHP va a interpretarr las
+siguientes secuencias de escape para caracteres especiales:
+
+**Secuencias de escape**
+Secuencia | Significado
+`\n` | Alimentación de línea (LF o 0x0A(10) en ASCII)
+`\r` | Retorno de carro (CR o 0x0D(13) en ASCII)
+`\t` | Tabulación horizontal (HT o 0x09(9) en ASCII)
+`\v` | Tabulación vertical (VT o 0x0B(11) en ASCII)
+`\e` | Escape (ESC o 0x1B(27) en ASCII)
+`\f` | Alimentación de formularrio (FF o 0x0C(12) en ASCII)
+`\\` | Diagonal invertida
+`\$` | Signo de dolar
+`\"` | Comillas dobles
+`\u0000` | Valor hexadecimal de un caracter unicode, el cual será representado utilizando la representación en UTF-8
+
+Si se utiliza la diagonal invertida en conjunto a cualquier otro caracter, se
+mostrará la diagonal invertida.
+
+Una de las ventajas de utilizar cadenas con comillas dobles, es qeu los nombres
+de las variables serán expandidas. Esto significa que en lugar de mostrar
+el nombre de la variable, se sustituirá con el valor de dicha variable.
+
+###### Conversión de variables en cadenas
+
+Existen dos tipos de sintaxis: la simpel y la compleja.
+* **La sintaxis simple** es la más común y conveniente. Proporciona una manera de
+  incrustar una variable, valor de arreglo o propiedad de objeto con un mínimo
+  de esfuerzo.
+* **La sintaxis compleja** se reconoce con la utilización de llaves `{}` rodeando
+  el nombre de la variable. Y permite la utilización de expresiones complejas.
+
+```php
+<?php
+$jugo = "manzana";
+
+// PHP_EOL = PHP_END_OF_LINE (fin de línea o salto de línea)
+// El caracter `.` (punto) se utiliza para concatenar(unir dos cadenas).
+
+echo "Él bebió algo de jugo de $jugo.".PHP_EOL;
+
+// Inválido: tiene un nombre incorrecto de la variable, porque es $jugo, no $jugos
+echo "Él bebió algún jugo hecho de $jugos.";
+
+// Válido: se especifica el fin de la variable encerrándola entre llaves
+echo "Él bebió algún jugo hecho de ${jugo}s.";
+```
+
+El ejemplo anterior dará la siguiente salida:
+```
+Él bebió algo de jugo de manzana.
+Él bebió algún jugo hecho de .
+Él bebió algún jugo hecho de manzanas.
+```
+
+De igual manera, un indice de arreglo o una propiedad de objeto puede convertirse.
+Con los indices de arreglo, los corchetes de cierre `]` señala el fin del índice.
+Las mismas reglas aplican para propiedades de objetos como variables simples.
+
+```php
+$jugos = array('manzana', 'naranja', 'tang'=>'uva');
+
+echo "Él bebió algún jugo de $jugos[0].".PHP_EOL;
+echo "Él bebió algún jugo de $jugos[1].".PHP_EOL;
+echo "Él bebió algún jugo de $jugos[tang].".PHP_EOL;
+
+class personas {
+    public $juan = "Juan Pérez";
+    public $maria = "María Pérez";
+    public $roberto = "Roberto Cortés";
+
+    public $perez = "Pérez";
+}
+
+$personas = new personas();
+
+echo "$gente->juan bebió jugo de $jugos[0].".PHP_EOL;
+echo "$gente->juan luego dijo hola a $gente->maria.".PHP_EOL;
+echo "La esposa de $gente->juan saludó a $gente->roberto.".PHP_EOL;
+echo "$gente->roberto saludó a los dos $gente->perales."; // <--- No funcionará
+```
+
+El ejemplo anterior dará la siguiente salida:
+```
+Él bebió algún jugo de manzana.
+Él bebió algún jugo de naranja.
+Él bebió algún jugo de uva.
+Juan Pérez bebió jugo de manzana.
+Juan Pérez luego dijo hola a María Pérez.
+La esposa de Juan Pérez saludó a Roberto Cortés.
+Roberto Cortés saludó a los dos .
+```
+
+La **Sintaxis Compleja** permite utilizar expresiones complejas dentro de las
+cadenas, además de permitir variables de tipo escalar, elementos de arreglos,
+propiedades de objetos. Así mismo puede incluir invocaciones a métodos de un
+objeto.
+
+Para utilizar esta sintaxis, sólo se debe envolver la expresión dentro de llaves
+`{ }`. Debido a que `{` no puede ser escapada, la sintaxis sólo se reconoce
+cuando se utiliza inmediatamente `$`.
+
+```php
+// Mostrar todos los errores
+error_reporting(E_ALL);
+
+$genial = 'fantastico';
+
+// No funcionará, salida: Esto es { fantastico}
+echo "Esto es { $genial}";
+
+// Funciona, salida: Esto es fantastico
+echo "Esto es {$genial}";
+
+// Funciona
+echo "Este cuadrado es {$cuadrado->ancho}00 centimetros ancho.";
+
+// Funciona, las claves enrtre comillas funcionan con sintaxis de llaves
+echo "Esto funciona: {$arreglo['clave']}";
+
+// Funciona
+echo "Esto funciona: {$matriz[4][3]}";
+
+// Esto no va a funcionar porque las claves en la sintaxis con llaves deben
+// incluir las comillas. Sin las comillas buscará el nombre de la clave como
+// el nombre de una constante.
+echo "Esto está mal: {$arreglo[clave][3]}";
+
+// Funciona. Cuando se utilicen arreglos multidimensionales dentro de las cadenas
+// se debe usar la sintaxis de llaves
+echo "Esto funciona: {$arreglo['clave'][3]}";
+
+// Funciona.
+echo "Esto funciona: ".$arreglo['clave'][3];
+
+echo "Esto funciona también: {$obj->valores[3]->nombre}";
+
+echo "Este es el valor de la variable llamada $nombre: {${$nombre}}";
+
+echo "Este es el valor de la variable llamada por el valor de retorno de getName(): {${$getName}}";
+
+echo "Este es el valor de la variable llamada por el valor de retorno de \$obj->getName(): {${$obj->getName()}}";
+
+// No funcionará, salida: Este es el valor de retorno de getName(): {getName()}
+echo "ESte es el valor de retorno de getName(): {getName()}";
+```
+
+#### Arreglos
+
+
+#### Iterables
+
+
+#### Objetos
+
+
+#### Recursos
+
+
+#### NULL
+
+
+#### Callbacks
+
+
+
+[2]: https://www.php.net/manual/en/language.types.php
