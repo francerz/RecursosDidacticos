@@ -653,6 +653,9 @@ echo "ID: $persona->id" . PHP_EOL .     // Salida: ID: 1
 
 ```
 
+* **Referencia de clases y objetos en PHP**
+  <https://www.php.net/manual/en/oop5.intro.php>
+
 #### Recursos
 
 
