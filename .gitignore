@@ -1,5 +1,5 @@
-**/*
-!.gitignore
-!_config.yml
-!assets/**/*
-!**/*.md
+**/*.xml
+**/*.dtd
+**/*.yml
+**/*.yaml
+**/*.json
