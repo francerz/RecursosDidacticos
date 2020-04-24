@@ -9,3 +9,5 @@ Desarrollo de Aplicaciones Web
 
 - Servidor Web
   - [PHP](../Lenguajes/PHP/index.md)
+    - [PHP: Constantes](../Lenguajes/PHP/Constantes.md)
+    - [PHP: Integración con HTML](../Lenguajes/PHP/IntegracionHTML.md)
