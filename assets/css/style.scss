@@ -15,10 +15,17 @@ header {
 
 ul > li {
     list-style-image: none;
+    padding: 4px;
     ::marker {
         font-size: 1em;
         vertical-align: baseline;
     }
+}
+
+a {
+    color: #40a8ff;
+    text-shadow: none;
+    text-decoration: none;
 }
 
 .example {
