@@ -347,12 +347,11 @@ que sean compatibles con el `type` del elemento `<input>` al que se asigna</em>.
   </datalist>
 </section>
 
-> *Nota*  
+> **Nota**  
 > Este atributo sirve cuando los valores presentados son sugeridos, pero su
 > valor puede ser modificado por el usuario, para una lista de valores fijos,
 > por ejemplo, de un catálogo de base de datos, utilizar la etiqueta
 > [`<select>`](#el-elemento-select)
-
 
 ##### Atributo `autofocus`
 
