@@ -334,16 +334,16 @@ que sean compatibles con el `type` del elemento `<input>` al que se asigna</em>.
   <label for="txtMunicipio">Municipio</label>
   <input id="txtMunicipio" type="text" list="lstMunicipios" />
   <datalist id="lstMunicipios">
-    <option value="Armería">
-    <option value="Colima">
-    <option value="Comala">
-    <option value="Coquimatlán">
-    <option value="Cuauhtemoc">
-    <option value="Ixtlahuacán">
-    <option value="Manzanillo">
-    <option value="Minatitlán">
-    <option value="Tecomán">
-    <option value="Villa de Álvarez">
+    <option value="Armería"></option>
+    <option value="Colima"></option>
+    <option value="Comala"></option>
+    <option value="Coquimatlán"></option>
+    <option value="Cuauhtemoc"></option>
+    <option value="Ixtlahuacán"></option>
+    <option value="Manzanillo"></option>
+    <option value="Minatitlán"></option>
+    <option value="Tecomán"></option>
+    <option value="Villa de Álvarez"></option>
   </datalist>
 </section>
 
