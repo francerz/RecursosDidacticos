@@ -3,8 +3,22 @@
 
 @import "{{ site.theme }}";
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+    color: #dbdbdb;
+}
+
 header {
     display: none;
+}
+
+ul > li {
+    list-style-image: none;
+    ::marker {
+        font-size: 1em;
+        vertical-align: baseline;
+    }
 }
 
 .example {
