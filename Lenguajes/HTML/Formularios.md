@@ -58,11 +58,11 @@ los datos que son absolutamente requeridos.
 Diseñar formularios es un paso importante cuando se van a crear sitios o
 aplicaciones. Existen algunas guías sobre experiencia de usuario en formularios.
 
-* https://www.smashingmagazine.com/2018/08/ux-html5-mobile-form-part-1/
-* https://www.smashingmagazine.com/2011/11/extensive-guide-web-form-usability/
-* https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php
-* https://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php
-* https://xd.adobe.com/ideas/principles/web-design/best-practices-form-design/
+* <https://www.smashingmagazine.com/2018/08/ux-html5-mobile-form-part-1/>
+* <https://www.smashingmagazine.com/2011/11/extensive-guide-web-form-usability/>
+* <https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php>
+* <https://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php>
+* <https://xd.adobe.com/ideas/principles/web-design/best-practices-form-design/>
 
 La elaboración de los bocetos no requiere el uso de herramientas especiales,
 pueden realizarse con cosas tan simples como lapiz y papel, pizarrones,
