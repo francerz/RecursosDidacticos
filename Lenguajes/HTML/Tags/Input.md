@@ -11,15 +11,15 @@ para tipos de entrada y atibutos.
 - [Etiqueta `<input>`](#etiqueta-input)
   - [Atributos](#atributos)
     - [Atributo `type`](#atributo-type)
-    - [`text`](#text)
-    - [`password`](#password)
-    - [`hidden`](#hidden)
-    - [`number`](#number)
-    - [`date`](#date)
-    - [`time`](#time)
-    - [`checkbox`](#checkbox)
-    - [`radio`](#radio)
-    - [`file`](#file)
+      - [Tipo `text`](#tipo-text)
+      - [Tipo `password`](#tipo-password)
+      - [Tipo `hidden`](#tipo-hidden)
+      - [Tipo `number`](#tipo-number)
+      - [Tipo `date`](#tipo-date)
+      - [Tipo `time`](#tipo-time)
+      - [Tipo `checkbox`](#tipo-checkbox)
+      - [Tipo `radio`](#tipo-radio)
+      - [Tipo `file`](#tipo-file)
     - [Atributo `value`](#atributo-value)
     - [Atributos `min` y `max`](#atributos-min-y-max)
     - [Atributos `maxlength` y `minlength`](#atributos-maxlength-y-minlength)
@@ -41,56 +41,47 @@ Atributos
 El funcionamiento de un `<input>` varía considerablemente dependiendo del valor
 de su atributo `type`. El valor predeterminado para el tipo es `text`.
 
-<a name="type-text"></a>
-### `text`
+#### Tipo `text`
 
 Es el valor predeterminado. Es un campo de texto de una sóla línea. Los saltos
 de línea son removidos automáticamente del valor del input.
 
-<a name="type-password"></a>
-### `password`
+#### Tipo `password`
 
 Es un campo de texto de una sóla línea, cuyo valor está obstruido. Alertará al
 usuario si el sitio no es seguro.
 
-<a name="type-hidden"></a>
-### `hidden`
+#### Tipo `hidden`
 
 Es un control que no se despliega, pero su valor es enviado al servidor.
 
-<a name="type-number"></a>
-### `number`
+#### Tipo `number`
 
 Un control para introducir un número. Despliega un selector y agrega una
 validación cuando esta es soportada. Muestra un teclado numérico en algunos
 dispositivos con teclados dinámicos.
 
-<a name="type-date"></a>
-### `date`
+#### Tipo `date`
 
 Es un control para introducir uan fecha (año, mes y día).
 Abre un selector de fecha o listas selectoras para el año, mes, día cuando está
 activo en los navegadores que lo soportan.
 
-<a name="type-time"></a>
-### `time`
+#### Tipo `time`
 
 Permite introducir una hora, sin incluir zona horaria.
 
-<a name="type-checkbox"></a>
-### `checkbox`
+#### Tipo `checkbox`
 
 Es una caja de verificación que permite seleccionar valores independientes para
 ser seleccionados o deseleccionados.
 
-<a name="type-radio"></a>
-### `radio`
+#### Tipo `radio`
 
 Permite seleccionar a un único valor entre un conjunto de múltiples opciones con
 el mismo `name`.
 
-<a name="type-file"></a>
-### `file`
+#### Tipo `file`
 
 Permite al usuario seleccionar un archivo. Utiliza el atributo `accept` para
 definir los tipos de archivos que el control puede seleccionar.
