@@ -1,6 +1,28 @@
 Formularios
 =======================================
 
+- [Formularios](#formularios)
+  - [Diseño de un formulario](#dise%c3%b1o-de-un-formulario)
+  - [Haciendo un formulario](#haciendo-un-formulario)
+    - [El elemento `<form>`](#el-elemento-form)
+    - [Los elementos `<label>`, `<input>` y `<textarea>`](#los-elementos-label-input-y-textarea)
+      - [Etiqueta `<input>`](#etiqueta-input)
+        - [Atributo `type`](#atributo-type)
+        - [Atributo `value`](#atributo-value)
+        - [Atributos `min` y `max`](#atributos-min-y-max)
+        - [Atributos `maxlength` y `minlength`](#atributos-maxlength-y-minlength)
+        - [Atributo `placeholder`](#atributo-placeholder)
+        - [Atributo `inputmode`](#atributo-inputmode)
+        - [Atributo `list`](#atributo-list)
+        - [Atributo `autofocus`](#atributo-autofocus)
+        - [Atributo `readonly`](#atributo-readonly)
+        - [Atributo `disabled`](#atributo-disabled)
+        - [Atributo `required`](#atributo-required)
+        - [Atributo `pattern`](#atributo-pattern)
+    - [El elemento `<select>`](#el-elemento-select)
+    - [El elemento `<button>`](#el-elemento-button)
+  - [Referencias](#referencias)
+
 Los formularios en HTML permiten al usuario interactuar con los sitios web,
 Los formularios permiten a los usuarios introducir datos, los cuales,
 generalmente son enviados a un servidor web, para procesamiento y almacenamiento.
