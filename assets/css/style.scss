@@ -12,10 +12,11 @@ body {
 header {
     display: none;
 }
-
+li {
+    padding: 4px;
+}
 ul > li {
     list-style-image: none;
-    padding: 4px;
     ::marker {
         font-size: 1em;
         vertical-align: baseline;
@@ -28,8 +29,10 @@ a {
     text-decoration: none;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
+}
+h1 {
     font-size: 1.6rem;
     margin: 1rem 0px;
     font-weight: bolder;
