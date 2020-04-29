@@ -18,7 +18,7 @@ del protocolo HTTP en C++.
       - [Otros `Content-Type`](#otros-content-type)
 
 ## Requisitos previos
-- [Aspectos Técnicos del Protocolo HTTP](/Protocolos/HTTP/AspectosTecnicos.md)
+- [Aspectos Técnicos del Protocolo HTTP](../../Protocolos/HTTP/AspectosTecnicos.md)
 
 Mensaje de petición
 ---------------------------------------
