@@ -8,6 +8,7 @@ Su uso está ampliamente extendido debido a su compatiblidad con el protocolo
 HTTP, el cual se utiliza como base de la WWW.
 
 - [REST (REpresentational State Transfer)](#rest-representational-state-transfer)
+  - [Requisitos Previos](#requisitos-previos)
   - [Conceptos básicos](#conceptos-b%c3%a1sicos)
     - [Recurso](#recurso)
     - [Sin estado](#sin-estado)
@@ -19,6 +20,12 @@ HTTP, el cual se utiliza como base de la WWW.
     - [Nombres de recursos](#nombres-de-recursos)
       - [Reglas para el diseño de rutas URL](#reglas-para-el-dise%c3%b1o-de-rutas-url)
     - [Métodos y códigos de estado](#m%c3%a9todos-y-c%c3%b3digos-de-estado)
+
+Requisitos Previos
+---------------------------------------
+
++ [HTML: Aspectos Técnicos](../../Protocolos/HTTP/AspectosTecnicos.md)
++ [URL: Uniform Resource Locator](../../Protocolos/URI/URL.md)
 
 Conceptos básicos
 ---------------------------------------
