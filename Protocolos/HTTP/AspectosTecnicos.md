@@ -113,7 +113,7 @@ petición anteriores:
 Respuesta *en formato JSON* tras solicitar el recurso en
 `http://www.ejemplo.com/categorias/2`.
 
-```http
+```
 200 HTTP/1.1 OK
 Content-Type: application/json; charset=utf-8
 Content-Length: 66
@@ -125,7 +125,7 @@ Content-Length: 66
 
 Respuesta al envío de datos por medio de un formulario HTML:
 
-```http
+```
 302 HTTP/1.1 FOUND
 Location: www.myapp.com/main/index.php
 Set-Cookie: session=F4f4gB5tbTYbmvhdkYCj7gvjfvv64bmgc5bYf75V67gvbgdf
