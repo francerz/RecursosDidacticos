@@ -18,7 +18,7 @@ definen la intensión, el recurso, metadatos e información de la petición.
 
 El formato de una petición HTTP es:
 
-```http
+```
 METODO /ruta/al/recurso HTTP/1.1¶
 Host: el.servidor.com¶
 Encabezado: Con su respectivo valor¶
