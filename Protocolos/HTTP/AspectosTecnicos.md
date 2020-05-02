@@ -95,7 +95,7 @@ difiriendo principalmente en su primera línea de encabezado.
 
 El formato de una petición HTTP es:
 
-```http
+```
 CODIGO HTTP/1.1 DESCRIPCION_ESTADO
 Encabezado: su respectivo valor
 Otro-Encabezado: su-valor-correspondiente
