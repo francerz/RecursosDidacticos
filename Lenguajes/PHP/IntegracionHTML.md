@@ -1,6 +1,12 @@
 PHP: Integración con HTML
 =======================================
 
+- [PHP: Integración con HTML](#php-integraci%c3%b3n-con-html)
+  - [Convertir a objetos de PHP](#convertir-a-objetos-de-php)
+  - [Colocándolo en HTML](#coloc%c3%a1ndolo-en-html)
+  - [Separando la lógica de la presentación](#separando-la-l%c3%b3gica-de-la-presentaci%c3%b3n)
+    - [Haciendo el código modular](#haciendo-el-c%c3%b3digo-modular)
+
 El siguiente ejercicio muestra como integrar PHP con HTML, para los siguiente se
 utilizará el archivo `categorias.json` el cual representa un conjunto de datos.
 
