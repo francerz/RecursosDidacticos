@@ -20,6 +20,9 @@ HTTP, el cual se utiliza como base de la WWW.
     - [Nombres de recursos](#nombres-de-recursos)
       - [Reglas para el diseño de rutas URL](#reglas-para-el-dise%c3%b1o-de-rutas-url)
     - [Métodos y códigos de estado](#m%c3%a9todos-y-c%c3%b3digos-de-estado)
+  - [Guías para implementación](#gu%c3%adas-para-implementaci%c3%b3n)
+    - [Servidor](#servidor)
+    - [Cliente](#cliente)
 
 Requisitos Previos
 ---------------------------------------
@@ -210,3 +213,14 @@ a los clientes una jerarquía intuitiva y fácil de entender.
 | `PUT`    | Reemplazar | `405` (Método no permitido)<br>Evitar, a menos de que se quiera reemplazar todos los recursos en la colección. | `200` (OK) o `204` (Sin contenido).<br>`404` (No encontrado), si no se encuentra el `id` o es inválido. |
 | `PATCH`  | Modificar | `405` (Método no permitido)<br>Evitar, a menos de que se quiera modificar la colección.                         | `200` (OK) o `204` (Sin contenido).<br>`404` (No encontrado), si no se encuentra el `id` o es inválido. |
 | `DELETE` | Eliminar  | `405` (Método no permitido)<br>Evitar, a menos de que se quiera eliminar la colección completa.                 | `200` (OK).<br>`404` (No encontrado), si no se encuentra el `id` o es inválido. |
+
+Guías para implementación
+---------------------------------------
+
+### Servidor
+
++ [PHP: Servidor REST nativo](../../Lenguajes/PHP/NativeREST/Server.md)
+
+### Cliente
+
++ [Xamarin: Cliente REST System.Net.Http](../../Tecnologias/Xamarin/Rest.md)
