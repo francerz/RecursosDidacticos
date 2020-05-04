@@ -22,6 +22,7 @@ Lenguaje PHP
       - [Recursos](#recursos)
       - [NULL](#null)
       - [Callbacks](#callbacks)
+  - [Véase también](#v%c3%a9ase-tambi%c3%a9n)
 
 PHP (PHP: Hipertext Preprocesor) es un lenguaje de programación popular que se
 utiliza para *scripting* del lado del servidor y con propósito general,
@@ -737,6 +738,18 @@ print_r(array_map(function($n) {
     return $n * 2;
 }, $numeros));
 ```
+
+Véase también
+---------------------------------------
+
+- [Constantes](./Constantes.md)
+- [Manejo del protocolo HTTP](./ManejoHTTP.md)
+- [Integración con HTML](./IntegracionHTML.md)
+- [Formularios Web](./FormulariosWeb.md)
+- Acceso a bases de datos
+  - [MySQL](./BasesDatos/MySQL.md)
+- Servicios Web
+  - [Servidor REST nativo](./NativeREST/Server.md)
 
 
 [2]: https://www.php.net/manual/en/language.types.php

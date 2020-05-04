@@ -5,6 +5,15 @@ almacenamiento y consulta persistente de datos, generalmente estos se almacenan
 en diversos contenedores, que por la naturaleza multiusuario de los sistemas web,
 la estrategia más común para implementarlo es mediante bases de datos.
 
+- [PHP: Acceso a base de datos MySQL](#php-acceso-a-base-de-datos-mysql)
+  - [Conexión a la base de datos](#conexi%c3%b3n-a-la-base-de-datos)
+    - [Código reutilizable](#c%c3%b3digo-reutilizable)
+  - [Manipulación de datos](#manipulaci%c3%b3n-de-datos)
+    - [Inserción](#inserci%c3%b3n)
+    - [Actualización](#actualizaci%c3%b3n)
+    - [Eliminación](#eliminaci%c3%b3n)
+    - [Consulta](#consulta)
+
 Conexión a la base de datos
 ---------------------------------------
 
